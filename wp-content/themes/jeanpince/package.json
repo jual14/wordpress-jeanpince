@@ -1,0 +1,19 @@
+{
+  "name": "wp-and-gulp-package",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-bower": "latest",
+    "gulp-compass": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-rename": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-sync": "latest",
+    "gulp-notify": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  }
+}
