@@ -1,7 +1,7 @@
 	
 
-jQuery(document).ready(function($){
-
+jQuery(document).ready(function(){
+	var $ = jQuery;
 	
 	//scroll product on concept-page
 	$(".scrollTo").on('click', function(e) {
@@ -30,17 +30,17 @@ jQuery(document).ready(function($){
     $(window).resize(function() {
       windowSize();
       if (windowWidth > 1020) {
-        $('.menu-desktop').css('display','block');
+        $('.jp-menu').css('display','block');
       }
       else {
-      	$('.menu-desktop').css('display','none');
+      	$('.jp-menu').css('display','none');
       }
     });
 
 	//Hamburger menu
 	$('#hamburger-btn').click(function() {
 		$(this).toggleClass('hamburger-open');
-		$('.menu-desktop').slideToggle();
+		$('.jp-menu').slideToggle();
 	});
 
 	//parallax
@@ -77,7 +77,7 @@ jQuery(document).ready(function($){
 		}
 		});
 	});
-	//edit button pause player
+	// edit button pause player
 	var vid = document.getElementById("bgvid");
 	var pauseButton = document.querySelector("#polina button");
 

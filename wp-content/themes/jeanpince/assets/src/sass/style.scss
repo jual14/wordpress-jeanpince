@@ -43,22 +43,12 @@ a {
 	}
 }
 
-.preprod {
-	float: left;
-	width: 120px;
-	height: 50px;
-	position: absolute;
-	top: 30px;
-	left: 240px;
-	text-transform: uppercase;
-	font-weight: bold;
-	-ms-transform: rotate(-1deg); /* IE 9 */
-    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
-    transform: rotate(-1deg);
-	color: $color-gold;
-	font-size: 1.8rem;
+.current_page_item {
+	text-decoration: underline !important;
+	a {
+		text-decoration: underline !important;
+	}
 }
-
 
 .float-left {
 	float: left;
@@ -76,14 +66,23 @@ a {
 //header.php
 header {
 	nav {
-	position: fixed;
-	width: 100%;
-	z-index: 999999;
-	background-color: $color-white;
-	min-height: 10rem;
+		position: fixed;
+		width: 100%;
+		z-index: 999999;
+		background-color: $color-white;
+		max-height: 9rem;
+		&:after {
+			content: "";
+			background-image: url(../img/top.png);
+			width: 100vw;
+			height: 2rem;
+			position: absolute;
+			bottom: -2rem;
+			left: 0;
+		}
 		.logo-container {
-			max-height: 10rem;
-			max-width: 15rem;
+			max-height: 8.5rem;
+			max-width: 14rem;
 			margin-left: 2rem;
 			.logo-img {
 				max-width: 160%;
@@ -94,11 +93,14 @@ header {
 				}
 			}
 		}
-		.menu-desktop {
-			text-transform: uppercase;
-			list-style: none;
-			padding-top: 3rem;
-			margin-right: 3rem;
+		.jp-menu {
+			ul {
+				text-transform: uppercase;
+				list-style: none;
+				padding-top: 2.5rem;
+				margin-right: 3rem;
+				float:right;
+			}
 			@media (max-width: 1020px) {
 				display: none;
 				z-index: 1;
@@ -107,10 +109,17 @@ header {
 				position: absolute;
 				top: 10rem;
 				width: 100%;
-				li {
-					display: block;
-					a {
+				margin-top: -1.5rem;
+				ul {
+					text-transform: uppercase;
+					list-style: none;
+					padding-top: 3rem;
+					margin-right: 3rem;
+					li {
 						display: block;
+						a {
+							display: block;
+						}
 					}
 				}
 			}
@@ -223,28 +232,14 @@ header {
 		} 
 	}
 }
-//Toggle 
-/* .menu {
-	text-transform: uppercase;
-	display: none;
-	z-index: 1;
-	list-style: none;
-	padding-top: 1rem;
-	background-color: $color-white;
-	position: absolute;
-	top: 10rem;
-	width: 100%;
-	li {
-		display: block;
-		a {
-			display: block;
-		}
-		@media (min-width: 940px) {
-			display: none !important;
-		}
-	}
-} */
+
 // footer.php
+.fix-foot {
+    width: 100%;
+    bottom: 0;
+	position: fixed;
+}
+
 footer {
 	width: 100%;
 	bottom: 0;
@@ -256,8 +251,8 @@ footer {
 			margin-left: 3rem;
 			a {
 				font-family: 'Lato';
-				font-size: 1.6rem;
-				font-weight: normal;
+				font-size: 1rem;
+				margin-top: 1.5rem;	
 			}
 		}
 		.social-network {
@@ -272,6 +267,7 @@ footer {
 .home-page {
 	img {
 		display: none;
+		padding-top: 9rem;
 	}
 	video { 
 	    position: fixed;
@@ -324,7 +320,7 @@ footer {
 //Parallax
 .block {
 	width: 100%;
-	height: 100%;
+	height: 60rem;
 	position: relative;
 	overflow: hidden;
 	font-size: 1rem;
@@ -397,6 +393,8 @@ footer {
 			padding: 0rem 4rem;
 			img {
 				margin-bottom: 5rem;
+				max-height: 25rem;
+				width: auto;
 				@media (max-width: 992px){
 					padding: 2rem 5rem;
 				}

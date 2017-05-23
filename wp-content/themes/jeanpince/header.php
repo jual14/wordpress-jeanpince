@@ -21,11 +21,11 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jeanpince' ); ?></a>
+	<!--<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jeanpince' ); ?></a>-->
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
+		<!--<div class="site-branding">-->
+			<!--<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
@@ -37,12 +37,28 @@
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+			endif; ?>-->
+		<!--</div> .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jeanpince' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+			<div class="float-left logo-container">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/LOGO_JEAN_PINCE.svg" alt="<?php bloginfo('name'); ?>">
+				</a>
+			</div>
+			<?php
+				wp_nav_menu( array(
+					'theme_location'  => 'menu-1',
+					'container_class'      => 'jp-menu',
+					 )
+				);
+			?>
+			<div class="toggle-btn">
+				<a id="hamburger-btn" class="hamburger" href="#">
+					<div class="hamburger-inner">
+					</div>
+				</a>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

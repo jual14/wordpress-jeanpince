@@ -11,16 +11,10 @@
 
 ?>
 
-	</div><!-- #content -->
+	<!--</div>-->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jeanpince' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'jeanpince' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'jeanpince' ), 'jeanpince', '<a href="https://automattic.com/" rel="designer">Julien Alix</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<!-- #colophon -->
+<!--</div>-->
 
 <?php wp_footer(); ?>
 
