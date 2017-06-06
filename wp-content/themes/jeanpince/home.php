@@ -2,7 +2,7 @@
 <section class="home-page">
 
 	<img class="img-responsive test" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/equipe-page-teamjeanpince.jpg" alt="equipe du restaurant jean pince">
-	<video poster="<?php echo get_template_directory_uri(); ?>/assets/dist/img/equipe-page-teamjeanpince.jpg" id="bgvid" playsinline autoplay muted loop>
+	<video poster="<?php echo get_template_directory_uri(); ?>/assets/dist/img/equipe-page-teamjeanpince.jpg" id="bgvid" playsinline autoplay loop>
 	   <!--WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->-->
 		<source src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/intro.mp4" type="video/webm">
 	</video>

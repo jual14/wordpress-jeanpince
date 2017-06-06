@@ -15,8 +15,7 @@ get_template_part( 'parallaxcontent4' ) ;
 ?>
 <section class="meal-footer text-center brandon-font">&amp découvrez chaque mois nos nouvelles suggestions</section>
 
-<?php get_template_part( 'foot' ) ;?>
-<?php
+<?php get_template_part( 'foot' ) ;
 
 get_footer();
 

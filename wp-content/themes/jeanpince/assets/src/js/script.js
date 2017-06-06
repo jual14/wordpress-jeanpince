@@ -44,7 +44,7 @@ jQuery(document).ready(function(){
 	});
 
 	//parallax
-	$('.img-parallax').each(function(){
+	$('.img-parallax, .img-para-concept').each(function(){
 		var img = $(this);
 		var imgParent = $(this).parent();
 		function parallaxImg () {
